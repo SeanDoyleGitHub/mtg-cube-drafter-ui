@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {DraftService} from './services/draft-service/draft.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cube-drafter-ui';
+
+  constructor(private draftService: DraftService) {
+  }
+
+  getDraft(draftId: string) {
+    this.draftService.getDraft(draftId).subscribe(test => console.log(test));
+  }
 }

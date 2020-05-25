@@ -1,9 +1,11 @@
 {
   "name": "cube-drafter-ui",
   "version": "0.0.0",
+  "host_ip_address": "192.168.0.25",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start-local": "ng serve",
+    "start-external": "ng serve --host %npm_package_host_ip_address%",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,10 +14,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.9",
+    "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.9",
     "@angular/compiler": "~9.1.9",
     "@angular/core": "~9.1.9",
     "@angular/forms": "~9.1.9",
+    "@angular/material": "^9.2.4",
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
